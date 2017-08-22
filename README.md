@@ -33,7 +33,7 @@ brew install gradle
 ./download_lib.sh
 ```
 download_lib.shを実行します。
-こちらのファイルはyamarobo様のリポジトリを丸パクリさせていただきました。
+こちらのファイルはyamarobo様のリポジトリから参考というかパクらさせていただきました。
 https://github.com/yamarobo/SotaServer
 
 ### Gradleの環境依存パラメータを設定
