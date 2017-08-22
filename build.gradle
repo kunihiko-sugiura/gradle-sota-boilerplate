@@ -30,7 +30,7 @@ repositories {
 
 dependencies {
 	compile 'com.google.guava:guava:22.0'
-  compile group: 'com.google.code.gson', name: 'gson', version: 'latest.release'
+  compile group: 'com.google.code.gson', name: 'gson', version: '2.6.1'
 	compile fileTree(dir: 'lib', include: '*.jar')
   testCompile 'junit:junit:4.12'
 }
@@ -47,7 +47,8 @@ task deploy {
   doLast {
     ssh.run {
       session(remotes.sota) {
-        // execute( "[ ! -e ${deploy_to}/${app_name}/ ] && mkdir ${deploy_to}/${app_name}/" , pty: true)
+        execute( "mkdir -p ${deploy_to}/${app_name}/")
+        // execute( "[ ! -e ${deploy_to}/${app_name}/ ] && mkdir ${deploy_to}/${app_name}/")
   	    put from: "build/libs/${app_name}.jar", into: "${deploy_to}/${app_name}/${app_name}.jar"
       }
     }
