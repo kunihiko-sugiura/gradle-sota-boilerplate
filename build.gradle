@@ -48,7 +48,6 @@ task deploy {
     ssh.run {
       session(remotes.sota) {
         execute( "mkdir -p ${deploy_to}/${app_name}/")
-        // execute( "[ ! -e ${deploy_to}/${app_name}/ ] && mkdir ${deploy_to}/${app_name}/")
   	    put from: "build/libs/${app_name}.jar", into: "${deploy_to}/${app_name}/${app_name}.jar"
       }
     }
