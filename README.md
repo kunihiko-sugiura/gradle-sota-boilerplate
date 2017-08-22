@@ -28,6 +28,21 @@ java -version
 brew install gradle
 
 
+### 外部依存ライブラリのダウンロード
+```
+./download_lib.sh
+```
+download_lib.shを実行します。
+こちらのファイルはyamarobo様のリポジトリを丸パクリさせていただきました。
+https://github.com/yamarobo/SotaServer
+
+### Gradleの環境依存パラメータを設定
+以下のファイルをコピーし環境依存設定を修正します。
+```
+cp gradle.properties.dest gradle.properties
+
+```
+
 ## Build & Deploy
 
 ### Build only
@@ -45,7 +60,7 @@ gradle deploy
 ```
 vi /home/vstone/vstonemagic/app/jar/app.properties
 
-length=<<アプリ数：デフォルト0>>
+length=<<登録アプリ数：デフォルト0>>
 Debug=false
 TimeZone=Asia/Tokyo
 
