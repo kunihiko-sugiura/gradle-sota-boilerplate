@@ -10,31 +10,32 @@ Macのアプリケーション管理にHomebrewを利用します。
 https://brew.sh/index_ja.html
 
 ### Javaのインストール
+```
 brew update && brew cleanup
 brew cask install java
+```
 
 #### インストール確認
 /usr/libexec/java_home -V
 
 #### 設定
+```
 vi .bash_profile
+```
 
 ```
 export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 ```
+
+```
 java -version 
+```
 
 ### Gradleのインストール
+```
 brew install gradle
-
-
-### 外部依存ライブラリのダウンロード
 ```
-./download_lib.sh
-```
-download_lib.shを実行します。
-こちらのファイルはyamarobo様のリポジトリから参考というかパクらさせていただきました。
-https://github.com/yamarobo/SotaServer
+
 
 ### Gradleの環境依存パラメータを設定
 以下のファイルをコピーし環境依存設定を修正します。
