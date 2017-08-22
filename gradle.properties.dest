@@ -1,0 +1,5 @@
+sota_ip=192.168.2.3
+sota_user=root
+sota_pw=password
+app_name=APP_NAME
+deploy_to=/home/vstone/vstonemagic/app/jar
